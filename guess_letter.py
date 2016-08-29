@@ -71,6 +71,6 @@ def play_game():
             print("Sorry your guess {} is not correct\n".format(user_choice))
             guesses -= 1
     else:
-        print("Sorry You Lost !!!")
+        print("Sorry You Lost the random letter was {} !".format(comp_choice))
 
 play_game()
