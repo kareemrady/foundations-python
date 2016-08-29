@@ -1,5 +1,6 @@
 import re
 import os
+import platform
 import time
 
 
@@ -33,10 +34,19 @@ def save_to_file(shopping_list):
             f.write('- ' + item + '\n')
 
 
+def detect_clear_string():
+    operating_sys = platform.system()
+    if operating_sys == 'Linux':
+        return 'clear'
+    else :
+        return 'cls'
+
+
 def new_shopping_list():
+    clear_screen_string = detect_clear_string()
     shopping_list = []
     while 1:
-        os.system('cls')
+        os.system(clear_screen_string)
         user_input = get_user_input()
         user_input_cap = user_input.upper()
         if user_input_cap == "Q":
