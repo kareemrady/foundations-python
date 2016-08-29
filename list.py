@@ -38,7 +38,7 @@ def detect_clear_string():
     operating_sys = platform.system()
     if operating_sys == 'Linux':
         return 'clear'
-    else :
+    else:
         return 'cls'
 
 
